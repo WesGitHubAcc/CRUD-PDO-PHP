@@ -16,6 +16,35 @@
         
         $array = array($nome, $email, $senhaEncriptada, $telefone, $dt_nascimento, $endereco);
 
-        $funcao = inserirUsuario($conexao, $array);
+        inserirUsuario($conexao, $array);
+
+        header('Location: ../View/viewUsuario.php');
+
     }
+
+    #DELETA USUARIO
+
+    if(isset($_POST['deletar'])){
+
+        $id = $_POST['deletar'];
+        $array = array($id);
+
+        deletarUsuario($conexao, $array);
+
+        header('Location: ../View/viewUsuario.php');
+    }
+
+    #EDITA USUARIO
+
+    if(isset($_POST['editar'])){
+
+        $id = $_POST['editar'];
+        $array = array($id);
+
+        alterarUsuario($conexao, $array);
+
+        header('Location: ../View/viewAlteraUsuario.php');
+    }
+
+
 ?>
