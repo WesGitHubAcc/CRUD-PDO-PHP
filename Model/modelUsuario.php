@@ -14,11 +14,8 @@
         $telefone = $_POST['telefone'];
         $dt_nascimento = $_POST['dt_nascimento'];
         
-        $array = array($nome, $email, $senha, $endereco, $telefone, $dt_nascimento);
+        $array = array($nome, $email, $senhaEncriptada, $telefone, $dt_nascimento, $endereco);
 
-        inserirUsuario($conexao, $array);
-
-        print_r($array);
-
+        $funcao = inserirUsuario($conexao, $array);
     }
 ?>

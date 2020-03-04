@@ -6,14 +6,13 @@
     define( 'MYSQL_DB_NAME', 'usuarios' );
 
     try {
+        $conexao = new PDO( 'mysql:host=' . MYSQL_HOST . ';dbname=' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
 
-        $conexao = new PDO( 'mysql: host = ' . MYSQL_HOST . '; bdname = ' . MYSQL_DB_NAME, MYSQL_USER, MYSQL_PASSWORD );
-        echo 'Conectado...';
 
     } catch ( PDOExeption $event) {
 
         echo 'Erro: ' . $event->getMessage();
-    }
+    }   
     
 
 ?>

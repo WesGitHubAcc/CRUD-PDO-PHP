@@ -13,7 +13,7 @@
         <p><input type="password" name="senha"          placeholder="SENHA"></p>
         <p><input type="text"     name="endereco"       placeholder="ENDEREÇO"></p>
         <p><input type="text"     name="telefone"       placeholder="TELEFONE"></p>
-        <p><input type="text"     name="dt_nascimento"  placeholder="DATA DE NASCIMENTO">
+        <p><input type="date"     name="dt_nascimento"  placeholder="DATA DE NASCIMENTO">
         <p><button type="submit"  name='cadastrar' value="Cadastrar"> Cadastrar </button></p>      
       </form>
 

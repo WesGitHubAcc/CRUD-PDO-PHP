@@ -1,9 +1,11 @@
 <?php
  
     function inserirUsuario($conexao, $array){
+
        try {
-            $usuarios = $conexao->prepare("insert into usuario (nome, email, senha, endereco, telefone, dt_nascimento) values (?, ?, ?, ?, ?, ?)");
+            $usuarios = $conexao->prepare("INSERT INTO usuario (nome, email, senha, telefone, dt_nascimento, endereco) VALUES (?, ?, ?, ?, ?, ?)");
             $query = $usuarios->execute($array);
+            echo 'cadastrado com sucesso!';
             return $query;
             
         }catch(PDOException $event) {
